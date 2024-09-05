@@ -24,10 +24,6 @@ function mousePressed() {
         return;
     }
     grid[gridX + gridY * 3] = id;
-
-    breadImage.resize(cellSize, cellSize);
-    cheeseImage.resize(cellSize, cellSize);
-    hamImage.resize(cellSize, cellSize);
 }
 
 function setup() {
@@ -42,8 +38,8 @@ function setup() {
 function draw() {
     background(255);
     for (let i = 0; i < 9; i++) {
-        if (grid[i] == 1) image(breadImage, i % 3, Math.floor(i / 3));
-        if (grid[i] == 2) image(cheeseImage, i % 3, Math.floor(i / 3));
-        if (grid[i] == 3) image(hamImage, i % 3, Math.floor(i / 3));
+        if (grid[i] == 1) image(breadImage, i % 3, Math.floor(i / 3), cellSize);
+        if (grid[i] == 2) image(cheeseImage, i % 3, Math.floor(i / 3), cellSize);
+        if (grid[i] == 3) image(hamImage, i % 3, Math.floor(i / 3), cellSize);
     }
 }
