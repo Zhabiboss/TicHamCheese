@@ -9,9 +9,6 @@ function preload() {
     breadImage = loadImage("Resources/bread.jpg");
     cheeseImage = loadImage("Resources/cheese.jpg");
     hamImage = loadImage("Resources/ham.jpg");
-    breadImage.resize(cellSize, cellSize);
-    cheeseImage.resize(cellSize, cellSize);
-    hamImage.resize(cellSize, cellSize);
 }
 
 function mousePressed() {
@@ -27,6 +24,10 @@ function mousePressed() {
         return;
     }
     grid[gridX + gridY * 3] = id;
+
+    breadImage.resize(cellSize, cellSize);
+    cheeseImage.resize(cellSize, cellSize);
+    hamImage.resize(cellSize, cellSize);
 }
 
 function setup() {
